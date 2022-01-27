@@ -4,7 +4,7 @@ Start Guide
 
 ### Install venv
 ```
-$ python venv -m {가상환경이름}
+$ python -m venv {가상환경이름}
 ```
 
 ### Install Environment (In Window)
