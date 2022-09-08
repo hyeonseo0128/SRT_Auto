@@ -40,6 +40,7 @@ for i in aa:
     select[int(i)-1][2]=True
 #
 while(True):
+    time.sleep(3)
     driver.refresh()
     driver.implicitly_wait(2)
     for i in select:
