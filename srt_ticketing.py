@@ -2,6 +2,7 @@ from selenium import webdriver
 from html_table_parser import parser_functions as parser
 from bs4 import BeautifulSoup
 import pandas as pd
+import time
  
 driver = webdriver.Chrome('./chromedriver')
  
