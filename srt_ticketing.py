@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from html_table_parser import parser_functions as parser
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -48,11 +49,15 @@ while(True):
         if(i[2] == True):
             txt=""
             if (i[1] == 1):
-                txt = driver.find_element_by_xpath("//*[@id=\"result-form\"]/fieldset/div[6]/table/tbody/tr["+str(i[0]-1)+"]/td[6]/a/span").text
-                a = driver.find_element_by_xpath("//*[@id=\"result-form\"]/fieldset/div[6]/table/tbody/tr["+str(i[0]-1)+"]/td[6]/a")
+                # txt = driver.find_element_by_xpath("//*[@id=\"result-form\"]/fieldset/div[6]/table/tbody/tr["+str(i[0]-1)+"]/td[6]/a/span").text
+                # a = driver.find_element_by_xpath("//*[@id=\"result-form\"]/fieldset/div[6]/table/tbody/tr["+str(i[0]-1)+"]/td[6]/a")
+                txt = driver.find_element(By.XPATH,"//*[@id=\"result-form\"]/fieldset/div[6]/table/tbody/tr["+str(i[0]-1)+"]/td[6]/a/span").text
+                a = driver.find_element(By.XPATH,"//*[@id=\"result-form\"]/fieldset/div[6]/table/tbody/tr["+str(i[0]-1)+"]/td[6]/a")
             elif (i[1] == 2):
-                txt = driver.find_element_by_xpath("//*[@id=\"result-form\"]/fieldset/div[6]/table/tbody/tr["+str(i[0]-1)+"]/td[7]/a/span").text
-                a = driver.find_element_by_xpath("//*[@id=\"result-form\"]/fieldset/div[6]/table/tbody/tr[" + str(i[0]-1) + "]/td[7]/a")
+                # txt = driver.find_element_by_xpath("//*[@id=\"result-form\"]/fieldset/div[6]/table/tbody/tr["+str(i[0]-1)+"]/td[7]/a/span").text
+                # a = driver.find_element_by_xpath("//*[@id=\"result-form\"]/fieldset/div[6]/table/tbody/tr[" + str(i[0]-1) + "]/td[7]/a")
+                txt = driver.find_element(By.XPATH,"//*[@id=\"result-form\"]/fieldset/div[6]/table/tbody/tr["+str(i[0]-1)+"]/td[7]/a/span").text
+                a = driver.find_element(By.XPATH,"//*[@id=\"result-form\"]/fieldset/div[6]/table/tbody/tr[" + str(i[0]-1) + "]/td[7]/a")
  
             if(txt=="예약하기"):
                 a.click()
