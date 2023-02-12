@@ -65,3 +65,4 @@ while (True):
                 break
             except:
                 driver.back()
+                driver.refresh()
