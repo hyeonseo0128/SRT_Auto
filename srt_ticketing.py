@@ -84,17 +84,29 @@ def login(driver):
     if SRT_PHONE_NUM == "" or SRT_PASSWORD == "":
         return
     try:
-        driver.find_element(by=By.ID, value="srchDvCd3").click()  # 휴대폰 로그인 Check
-        driver.find_element(by=By.ID, value="srchDvNm03").send_keys(
+        driver.find_element(by=By.ID, value="srchDvNm01").send_keys(
             SRT_PHONE_NUM
         )  # 휴대폰 번호 입력
-        driver.find_element(by=By.ID, value="hmpgPwdCphd03").send_keys(
+        driver.find_element(by=By.ID, value="hmpgPwdCphd01").send_keys(
             SRT_PASSWORD
         )  # 비밀번호 입력
         driver.find_element(
             by=By.XPATH,
-            value='//*[@id="login-form"]/fieldset/div[1]/div[1]/div[4]/div/div[2]/input',
+            value='//*[@id="login-form"]/fieldset/div[1]/div[1]/div[2]/div/div[2]/input',
         ).click()  # 로그인 클릭
+
+        ######################## 휴대전화번호 로그인
+        # driver.find_element(by=By.ID, value="srchDvCd3").click()  # 휴대폰 로그인 Check
+        # driver.find_element(by=By.ID, value="srchDvNm03").send_keys(
+        #     SRT_PHONE_NUM
+        # )  # 휴대폰 번호 입력
+        # driver.find_element(by=By.ID, value="hmpgPwdCphd03").send_keys(
+        #     SRT_PASSWORD
+        # )  # 비밀번호 입력
+        # driver.find_element(
+        #     by=By.XPATH,
+        #     value='//*[@id="login-form"]/fieldset/div[1]/div[1]/div[4]/div/div[2]/input',
+        # ).click()  # 로그인 클릭
     except Exception as e:
         print(e)
 
