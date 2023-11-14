@@ -18,10 +18,10 @@ import threading
 
 event = threading.Event()
 
-SRT_PHONE_NUM = "1784829618"
-SRT_PASSWORD = "nsns1611%"
-TELEGRAM_TOKEN = "5418212243:AAG7FPENqJvWwqVbqdVH94FSi3QBiDt3dG0"
-TELEGRAM_CHAT_ID = "5661621143"
+SRT_PHONE_NUM = ""
+SRT_PASSWORD = ""
+TELEGRAM_TOKEN = ""
+TELEGRAM_CHAT_ID = ""
 
 
 CONFIRM = '//*[@id="wrap"]/div[4]/div/div[2]/div[7]/a'
