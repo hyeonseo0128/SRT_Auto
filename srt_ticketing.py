@@ -221,9 +221,9 @@ def main():
             send_telegram_message("매크로 종료")
             driver.quit()
         except Exception as e:
-            tb_str = traceback.format_exception(
-                etype=type(e), value=e, tb=e.__traceback__
-            )
+            tb_str = traceback.format_exception(e)
+            search_button = driver.find_element(By.XPATH, '//*[@id="search_top_tag"]/input')
+            search_button.click()
             print("".join(tb_str))
             # print(e)
             driver.refresh()
